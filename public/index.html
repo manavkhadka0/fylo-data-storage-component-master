@@ -24,7 +24,6 @@
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
-
     </style>
   </head>
   <body class="bg-very-dark-blue h-screen md:relative font-Raleway">
@@ -51,35 +50,63 @@
           relative
           justify-center
           items-center
+          md:items-end
           w-3/4
-          md:w-1/2
+          md:w-3/4
+          lg:w-1/2
           z-20
         "
       >
-      <!-- First container -->
+        <!-- First container -->
         <div
           class="
             bg-dark-blue
             p-6
             rounded-l-xl rounded-br-xl rounded-tr-7xl
-            w-11/12
+            md:w-5/12
+            w-full
             shadow-xl
+            md:h-full
           "
         >
-        <!-- logo and ictures -->
+          <!-- logo and ictures -->
           <img class="h-10 w-24" src="./images/logo.svg" alt="" srcset="" />
-          <div class="flex gap-4 md:gap-6 "">
+          <div class="flex gap-4 md:gap-6 md:mt-10">
             <img
-              class="p-3 bg-very-dark-blue rounded-xl mt-8 h-10 w-10"
+              class="
+                p-3
+                bg-very-dark-blue
+                rounded-xl
+                mt-8
+                h-10
+                w-10
+                md:h-12 md:w-12
+              "
               src="./images/icon-document.svg"
               alt=""
             />
             <img
-              class="p-3 bg-very-dark-blue rounded-xl mt-8 h-10 w-10"
+              class="
+                p-3
+                bg-very-dark-blue
+                rounded-xl
+                mt-8
+                h-10
+                w-10
+                md:h-12 md:w-12
+              "
               src="./images/icon-folder.svg"
               alt=""
             /><img
-              class="p-3 bg-very-dark-blue rounded-xl mt-8 h-10 w-10"
+              class="
+                p-3
+                bg-very-dark-blue
+                rounded-xl
+                mt-8
+                h-10
+                w-10
+                md:h-12 md:w-12
+              "
               src="./images/icon-upload.svg"
               alt=""
             />
@@ -92,18 +119,23 @@
             bg-dark-blue
             p-6
             md:flex-2
+            justify-center
+            items-center
+            flex flex-col
             rounded-xl
-            w-11/12
+            w-full
             shadow-xl
             md:self-end
           "
         >
+          <!-- info -->
           <p class="text-white text-sm mb-4 text-center">
             You’ve used
             <span class="text-xl font-ralewaythin font-extrabold"> 815 GB</span>
             of your storage
           </p>
-          <div class="w-full bg-very-dark-blue h-4 rounded-lg">
+          <!-- progress bar -->
+          <div class="w-full bg-very-dark-blue h-4 rounded-lg py-0.5">
             <div
               class="
                 h-full
@@ -117,13 +149,30 @@
                 items-center
               "
             >
-              <div class="w-3 mr-0.5 h-3/4 bg-white rounded-full"></div>
+              <div class="w-2 mr-0.5 h-3/4 bg-white rounded-full"></div>
             </div>
           </div>
-          <div class="flex justify-between mt-1">
+          <!-- 0gb 1000gb -->
+          <div class="flex justify-between mt-2 mb-10 w-full">
             <p class="text-white text-sm">0 Gb</p>
             <p class="text-white text-sm">1000 Gb</p>
-
+          </div>
+          <!-- popup -->
+          <div
+            class="
+              absolute
+              bg-white
+              text-black
+              p-8
+              flex flex-row
+              items-center
+              gap-4
+              rounded-xl
+              -bottom-10
+            "
+          >
+            <h1 class="font-ralewaythin text-3xl font-extrabold">185</h1>
+            <p class="font-medium opacity-50">GB left</p>
           </div>
         </div>
       </div>
